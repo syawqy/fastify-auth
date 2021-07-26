@@ -1,0 +1,36 @@
+{
+  "name": "fastify-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:tap:dev": "node build/test/index.test.js",
+    "test:jest:dev": "npm run test --watch",
+    "clean": "rm -rf build/",
+    "clean:windows": "rmdir build /s /q",
+    "build:dev": "tsc -w",
+    "start:dev": "nodemon build/index.js",
+    "test": "jest --json --outputFile=src/__test__/output.json",
+    "test:coverage": "jest --coverage",
+    "build": "tsc",
+    "start": "node build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "elastic-apm-node": "^3.17.0",
+    "fastify": "^3.19.1",
+    "fastify-autoload": "^3.8.0",
+    "fastify-blipp": "^3.1.0",
+    "fastify-jwt": "^3.0.0",
+    "fastify-plugin": "^3.0.0",
+    "fastify-redis": "^4.3.1",
+    "fastify-swagger": "^4.8.3",
+    "pino-pretty": "^5.1.1",
+    "sequelize": "^6.6.5",
+    "tedious": "^11.0.9",
+    "ts-node": "^10.1.0"
+  }
+}

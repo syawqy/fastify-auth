@@ -20,21 +20,7 @@ createServer()
         } else {
             server.log.info('Server not connected to APM Server');
         }
-
-        server.kafkaClient.on('ready', () => {
-            server.log.info('Kafka Client Connection has been established successfully.');
-        });
-        server.kafkaClient.on('error', (err) => {
-            server.apm.captureError(JSON.stringify({
-                method: 'Kafka',
-                err,
-            }));
-
-            server.log.info('Server not connected to Kafka');
-        });
-
         
-
     }).catch(error => {
         // do something
         console.log(error);
